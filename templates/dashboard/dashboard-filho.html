@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% block content %}
+
+<header class="header">
+  <h1>Bem-vindo(a), {{user.name}}!</h1>
+</header>
+
+<aside class="sidebar">
+  <p>Código da família: {{user.fam_code}}</p>
+
+  <a
+    href="/delete-account"
+    onclick="return confirm('Tem certeza? Todos os dados serão perdidos.');"
+  >
+    Excluir conta
+  </a>
+
+  <a href="/logout">Sair</a>
+</aside>
+
+<main class="main-container">
+  <section class="card">
+    <h2>Estado emocional da sua mãe hoje:</h2>
+    {% if last_checkin %}
+
+      <div class="emotion-status emotion-{{last_checkin.emotion}}">
+
+        {% if last_checkin.emotion == 'feliz' %}
+          😄 Feliz
+
+        {% elif last_checkin.emotion == 'bem' %}
+          😊 Bem
+
+        {% elif last_checkin.emotion == 'triste' %}
+          😥 Triste
+
+        {% elif last_checkin.emotion == 'ansiosa' %}
+          😟 Ansiosa
+
+        {% elif last_checkin.emotion == 'sobrecarregada' %}
+          😫 Sobrecarregada
+
+        {% elif last_checkin.emotion == 'saudade' %}
+          💔 Saudade
+
+        {% endif %}
+
+      </div>
+
+    {% else %}
+      <p class="empty-state">
+        Nenhum check-in registrado hoje.
+      </p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h3>Mensagens recebidas</h3>
+
+    {% for message in mother_message %}
+    <p class="message-item">{{ message.content }}</p>
+    {% else %}
+    <p class="empty-state">Você não tem mensagens.</p>
+    {% endfor %}
+  </section>
+
+  <section class="card">
+    <h3>Mande uma mensagem de apoio</h3>
+
+    <form method="post" class="form-container">
+      <textarea name="message" class="textarea"></textarea>
+      <button type="submit" class="button">Enviar</button>
+    </form>
+  </section>
+</main>
+
+{% endblock %}

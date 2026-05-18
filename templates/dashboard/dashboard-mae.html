@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block content %}
+
+<header class="header">
+  <h1>Bem-vinda ao seu check-in emocional, {{user.name}}!</h1>
+</header>
+
+<aside class="sidebar">
+  <p>Código da família: {{user.fam_code}}</p>
+
+  <a
+    href="/delete-account"
+    onclick="return confirm('Tem certeza? Todos os dados serão perdidos.');"
+  >
+    Excluir conta
+  </a>
+
+  <a href="/logout">Sair</a>
+</aside>
+
+<main class="main-container">
+  <form method="post" class="form-container">
+    <section class="card">
+      <h2>Como você está se sentindo hoje?</h2>
+      <div class="emotion-option-container">
+        <label class="emotion-option feliz">
+          <input type="radio" name="emotion" value="feliz" required />
+          <span>😄 Feliz</span>
+        </label>
+
+        <label class="emotion-option bem">
+          <input type="radio" name="emotion" value="bem" />
+          <span>😊 Bem</span>
+        </label>
+
+        <label class="emotion-option triste">
+          <input type="radio" name="emotion" value="triste" />
+          <span>😥 Triste</span>
+        </label>
+
+        <label class="emotion-option ansiosa">
+          <input type="radio" name="emotion" value="ansiosa" />
+          <span>😟 Ansiosa</span>
+        </label>
+
+        <label class="emotion-option sobrecarregada">
+          <input type="radio" name="emotion" value="sobrecarregada" />
+          <span>😫 Sobrecarregada</span>
+        </label>
+
+        <label class="emotion-option saudade">
+          <input type="radio" name="emotion" value="saudade" />
+          <span>💔 Saudade</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Mensagens recebidas</h3>
+
+      {% for message in received_messages %}
+      <p>Mensagem de {{ message.sender.name}}!</p>
+      <p class="message-item">{{ message.content }}</p>
+      {% else %}
+      <p class="empty-state">Você não tem mensagens.</p>
+      {% endfor %}
+    </section>
+
+    <section class="card">
+      <h3>Quer deixar uma mensagem?</h3>
+      <textarea name="message" class="textarea"></textarea>
+    </section>
+
+    <button type="submit" class="button">Enviar</button>
+  </form>
+</main>
+
+{% endblock %}

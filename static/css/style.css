@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("/static/img/ceu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #2e2e2e;
+}
+
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #ffa2f0;
+}
+
+header {
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+main {
+  width: 40%;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.card,
+section {
+  background-color: transparent;
+  margin: 20px 0;
+  padding: 25px;
+
+  border-radius: 20px;
+  box-shadow: 0 0px 35px 10px rgba(0, 0, 0, 0.288);
+}
+
+/*  sidebar  */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 240px;
+  height: 100vh;
+
+  background-color: #ffc7a285;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.253);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 30px 20px;
+  gap: 15px;
+}
+
+aside a {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  color: #2e2e2e;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+aside a:hover {
+  background-color: #ff9a7bd2;
+  color: #8f2929;
+}
+
+aside::before {
+  content: "Menu";
+  font-size: 12px;
+  color: #ffffff86;
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+
+  padding: 20px;
+  margin-top: 40px;
+
+  color: #666;
+  font-size: 14px;
+}
+/*  forms  */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form button {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffc7a285;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.219);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ffffff;
+  font-style: italic;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #ffc7a285;
+}
+
+/*  buttons  */
+button {
+  background-color: #181e2b;
+  color: white;
+
+  padding: 10px 25px;
+  border-radius: 10px;
+
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #2a3a5a;
+}
+
+/*  radio buttons  */
+.radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  padding-left: 50px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #ffc7a285;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.emotion-feliz { background: #d4f8e8; color: #1e7d4f; border-radius: 20px; font-weight: bold;}
+.emotion-bem { background: #ffdeff; color: #8f1b8f; border-radius: 20px; font-weight: bold;}
+.emotion-triste { background: #e6e6ff; color: #1b4f9c; border-radius: 20px; font-weight: bold;}
+.emotion-ansiosa { background: #fff3cd; color: #8a6d3b; border-radius: 20px; font-weight: bold;}
+.emotion-sobrecarregada { background: #ffd6d6; color: #8b2f2f; border-radius: 20px; font-weight: bold;}
+.emotion-saudade { background: #f2e6ff; color: #5e2a8a; border-radius: 20px; font-weight: bold;}
+
+/* seção emoções */
+.emotion-section h2 {
+  margin-bottom: 25px;
+}
+
+/* grid */
+.emotion-option-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* card emoção */
+.emotion-option {
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+/* mensagens */
+.message-item {
+  padding: 10px;
+  background: #ffc7a285;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.empty-state {
+  color: #ffffff;
+  font-style: italic;
+}
+
+/* mensagens flash */
+
+.flash-container {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.flash {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.flash.success {
+  background: green;
+}
+
+.flash.error {
+  background: red;
+}
+
+.flash.warning {
+  background: orange;
+}
+
+.flash {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+  animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

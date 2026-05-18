@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %}
+
+<header class="header">
+  <h1>Cadastro</h1>
+</header>
+
+<main class="main-container">
+  <section class="card">
+    <form method="post" class="form-container">
+      <label>
+        Nome
+        <input type="text" name="name" placeholder="Digite seu nome" required />
+      </label>
+
+      <label>
+        Email
+        <input
+          type="text"
+          name="email"
+          placeholder="exemplo@email.com"
+          required
+        />
+      </label>
+
+      <label>
+        Senha
+        <input
+          type="password"
+          name="password"
+          placeholder="Criar senha"
+          required
+        />
+      </label>
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="user_type" value="mae" />
+          Sou mãe
+        </label>
+
+        <label>
+          <input type="radio" name="user_type" value="filho" />
+          Sou filho
+        </label>
+      </div>
+
+      <div id="family-code-container" class="family-box">
+        <label>
+          Código da família
+          <input
+            type="text"
+            name="fam_code"
+            id="fam_code"
+            placeholder="FAM-1234"
+          />
+        </label>
+      </div>
+
+      <button type="submit" class="button">Criar conta</button>
+    </form>
+  </section>
+
+  <script src="{{ url_for('static', filename='js/auth-display.js') }}"></script>
+</main>
+
+{% endblock %}
