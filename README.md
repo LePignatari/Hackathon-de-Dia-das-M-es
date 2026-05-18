@@ -15,29 +15,37 @@ A proposta é simples: a mãe pode registrar diariamente como está se sentindo,
 A plataforma cria um ambiente de cuidado, escuta e fortalecimento dos vínculos familiares.
 
 ---
+## 🎯 Objetivo do projeto
 
-## 🚀 Funcionalidades
+O objetivo principal do projeto é promover:
 
-### 👩 Dashboard da mãe
-- Registro de **check-in emocional diário**
-- Seleção de emoções
-- Visualização de mensagens recebidas dos filhos
-- Envio de mensagens para filhos conectados
-- Código familiar exclusivo
-- Exclusão de conta
+✅ acolhimento emocional  
+✅ comunicação familiar  
+✅ fortalecimento entre mães e filhos  
+✅ acompanhamento emocional diário
 
-### 🧑 Dashboard do filho
-- Visualização do estado emocional atual da mãe
-- Recebimento de mensagens da mãe
-- Envio de mensagens de apoio
-- Histórico limitado de mensagens
-- Exclusão de conta
+---
 
-### 🔐 Sistema de autenticação
-- Cadastro de mãe e filho(a)
-- Login com validação de tipo de usuário
-- Conexão familiar via **código de família**
-- Sessão de usuário com Flask
+## ✨ Funcionalidades
+
+- ✅ Cadastro e login
+- ✅ Diferenciação de usuário (mãe/filho)
+- ✅ Código de família
+- ✅ Check-in emocional diário
+- ✅ Envio de mensagens entre mãe e filho
+- ✅ Visualização do estado emocional
+- ✅ Histórico de mensagens
+- ✅ Exclusão de conta
+  
+---
+
+## 🔮 Melhorias futuras
+
+- Recuperação de senha
+- Alterar senha
+- Atualização de perfil
+- Notificações
+- Sistema de autenticação segura com hash de senha
 
 ---
 
@@ -77,7 +85,7 @@ Cada emoção possui uma **cor personalizada**, facilitando a visualização do 
 ## 📂 Estrutura do projeto
 
 ```txt
-Hackaton Dia das Mães/
+sempre-perto/
 │
 ├── main.py
 ├── views.py
@@ -99,3 +107,44 @@ Hackaton Dia das Mães/
 │   └── dashboard/
 │
 └── README.md
+
+```
+## 🚀 Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/LePignatari/Hackathon-de-Dia-das-M-es.git
+```
+
+Entre na pasta:
+
+```bash
+cd Hackathon-de-Dia-das-M-es
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute o projeto:
+
+```bash
+python main.py
+```
+
+---
+
+## 👩‍💻 Desenvolvido por
+
+**Le 💙**
+
+Projeto criado para fins de aprendizado, prática em desenvolvimento web e participação em hackathon.
+
+---
+
+## 📜 Licença
+
+Este projeto é livre para fins educacionais e de aprendizado.
