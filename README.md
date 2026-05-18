@@ -44,11 +44,24 @@ O objetivo principal do projeto é promover:
 
 ## 🔮 Melhorias futuras
 
+### Segurança
 - Recuperação de senha
-- Alterar senha
-- Atualização de perfil
-- Notificações
+- Alteração de senha
 - Sistema de autenticação segura com hash de senha
+- Proteção de rotas com Flask-Login
+
+### Experiência do usuário (UX/UI)
+- Redesign da interface
+- Melhorias de experiência do usuário (UX)
+- Interface mais moderna e acessível
+- Responsividade para dispositivos móveis e tablets
+- Feedbacks visuais e animações suaves
+
+### Funcionalidades
+- Atualização de perfil
+- Upload de foto de perfil
+- Notificações
+- Histórico emocional
 
 ---
 
