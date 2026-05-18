@@ -1,5 +1,8 @@
 # 💙 Sempre Perto
 
+🔗 **Acesse o projeto online:**  
+https://sempre-perto.onrender.com
+
 > Um espaço de acolhimento emocional entre mães e filhos.
 
 Projeto desenvolvido para o **Hackathon de Dia das Mães do Servidor dos Programadores**, com o objetivo de fortalecer a comunicação, o acolhimento emocional e a conexão familiar através de check-ins emocionais e mensagens de apoio.
